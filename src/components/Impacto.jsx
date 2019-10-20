@@ -5,7 +5,7 @@ class Impacto extends Component {
   render() {
     return (
       <Container>
-        <h1>Impacto Social</h1>
+        <h4 style={{color: "#A23234"}}>IMPACTO SOCIAL</h4>
         <p>
           O incremento no impacto provocado deu-se gradualmente conforme o
           reconhecimento da OPN aumentava ao longo dos anos, cumprindo com sua
