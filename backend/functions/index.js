@@ -63,61 +63,8 @@ const gerarIdn = (membros) => {
     return membros;
 }
 
-app.post('/api/add-users', (req, res) => {
-    req.body = [{
-            "nome": "Abraao Jose",
-            "email": "abraao@mail.com",
-            "time": "Ação Social",
-            "aniversario": "01/01/2001",
-            "telefone": "12345",
-            "operadora": "M@U",
-            "facebook": "facebook.com/markzuckeberg",
-            "universidade": "UFSCar",
-            "curso": "Eng. Comp",
-            "ano": "2016",
-            "carro": false
-        },
-        {
-            "nome": "José da silva",
-            "email": "jose@mail.com",
-            "time": "Arrecadação",
-            "aniversario": "01/01/2001",
-            "telefone": "12345",
-            "operadora": "M@U",
-            "facebook": "facebook.com/markzuckeberg",
-            "universidade": "UFSCar",
-            "curso": "Eng. Comp",
-            "ano": "2016",
-            "carro": false
-        },
-        {
-            "nome": "Víctor Cora",
-            "email": "victorcora98@gmail.com",
-            "time": "Arrecadação",
-            "aniversario": "18/05/1998",
-            "telefone": "12345",
-            "operadora": "M@U",
-            "facebook": "facebook.com/markzuckeberg",
-            "universidade": "UFSCar",
-            "curso": "Eng. Comp",
-            "ano": "2016",
-            "carro": true
-        },
-        {
-            "nome": "Bartolomeu",
-            "email": "bart@mail.com",
-            "time": "Eventos",
-            "aniversario": "01/01/2001",
-            "telefone": "12345",
-            "operadora": "M@U",
-            "facebook": "facebook.com/markzuckeberg",
-            "universidade": "UFSCar",
-            "curso": "Eng. Comp",
-            "ano": "2016",
-            "carro": false
-        }
-    ]
-    const membros = gerarIdn(req.body);
+const addUsers = (usuarios, callback) => {
+    const membros = gerarIdn(usuarios);
     let ref = db.collection('users');
     membros.forEach((pessoa) => {
         ref.doc(pessoa.idn).set(pessoa);
@@ -134,7 +81,7 @@ app.post('/api/add-users', (req, res) => {
             return err;
         })
     });
-});
+}
 
 app.get('/api/get-all-users', (req, res) => {
     let ref = db.collection('users');
@@ -196,16 +143,62 @@ app.get('/api/get-messages', (req, res) => {
 
 // Não funcionando mas devia pegar o csv e cadastrar os membros
 app.post('/add-members', (req, res) => {
-    const csv = req.body.toString().match(/Time[^]*/g).toString();
-    csvtojson().fromString(csv).then(obj => {
-        console.log(obj);
-        return null;
-    })
-    .catch(err => {
-        return err;
-    })
-    console.log(csv);
-    return res.send(csv);
+    const lista = [{
+            "nome": "Abraao Jose",
+            "email": "abraao@mail.com",
+            "time": "Ação Social",
+            "aniversario": "01/01/2001",
+            "telefone": "12345",
+            "operadora": "M@U",
+            "facebook": "facebook.com/markzuckeberg",
+            "universidade": "UFSCar",
+            "curso": "Eng. Comp",
+            "ano": "2016",
+            "carro": false
+        },
+        {
+            "nome": "José da silva",
+            "email": "jose@mail.com",
+            "time": "Arrecadação",
+            "aniversario": "01/01/2001",
+            "telefone": "12345",
+            "operadora": "M@U",
+            "facebook": "facebook.com/markzuckeberg",
+            "universidade": "UFSCar",
+            "curso": "Eng. Comp",
+            "ano": "2016",
+            "carro": false
+        },
+        {
+            "nome": "Víctor Cora",
+            "email": "victorcora98@gmail.com",
+            "time": "Arrecadação",
+            "aniversario": "18/05/1998",
+            "telefone": "12345",
+            "operadora": "M@U",
+            "facebook": "facebook.com/markzuckeberg",
+            "universidade": "UFSCar",
+            "curso": "Eng. Comp",
+            "ano": "2016",
+            "carro": true
+        },
+        {
+            "nome": "Bartolomeu",
+            "email": "bart@mail.com",
+            "time": "Eventos",
+            "aniversario": "01/01/2001",
+            "telefone": "12345",
+            "operadora": "M@U",
+            "facebook": "facebook.com/markzuckeberg",
+            "universidade": "UFSCar",
+            "curso": "Eng. Comp",
+            "ano": "2016",
+            "carro": false
+        }
+    ]
+    addUsers(lista, () => {
+        return {"status": "ok"}
+    });
 });
 
 exports.api = functions.https.onRequest(app);
