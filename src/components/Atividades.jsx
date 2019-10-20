@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap";
 import diamercado from "../assets/diamercado.jpg";
 import lacos from "../assets/lacos.jpg";
 import diad from "../assets/diad.jpg";
+import "./styles.css"
 
 class Atividades extends Component {
   render() {

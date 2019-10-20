@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Container, Form, Button } from "react-bootstrap";
+import "./styles.css"
 
 class Contato extends Component {
   render() {

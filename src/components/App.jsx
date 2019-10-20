@@ -14,6 +14,7 @@ import SejaMembro from "./SejaMembro";
 import Instituicoes from "./Instituicoes";
 import Login from "./Login";
 import AreaMembro from "./AreaMembro"
+import "./styles.css"
 
 class App extends Component {
   render() {

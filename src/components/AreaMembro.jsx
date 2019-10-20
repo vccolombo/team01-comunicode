@@ -1,5 +1,6 @@
 import React, { Component, Input } from "react";
 import { Container, Form, Button } from "react-bootstrap";
+import "./styles.css"
 
 class AreaMembro extends Component {
   render() {

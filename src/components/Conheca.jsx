@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import {Container} from "react-bootstrap";
 import quemsomos from "../assets/quemsomos.jpg";
+import "./styles.css"
 
 class Conheca extends Component {
   render() {

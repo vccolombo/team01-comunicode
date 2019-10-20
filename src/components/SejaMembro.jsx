@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import {Container} from "react-bootstrap";
 import siteopn from "../assets/siteopn.jpg";
+import "./styles.css"
 
 class SejaMembro extends Component {
   render() {
