@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import {Container} from "react-bootstrap";
+import quemsomos from "../assets/quemsomos.jpg";
 
 class Conheca extends Component {
   render() {
@@ -14,7 +15,11 @@ class Conheca extends Component {
           segundo semestre ações voltadas para ajudar instituições carentes da
           cidade.
         </p>
+        <br/>
 
+        <img  src={quemsomos} style={{width: "auto", height: "350px", display: "block", marginLeft: "auto", marginRight: "auto"}}/>
+        <br/>
+        <br/>
         <br/>
         
         <h4 style={{color: "#A23234"}}>HISTÓRIA</h4>

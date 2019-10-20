@@ -5,7 +5,7 @@ class Times extends Component {
   render() {
     return (
       <Container>
-        <h4 style={{color: "#A23234", fontWeight:"bold"}}>TIMES</h4>
+        <h4 style={{color: "#A23234"}}>TIMES</h4>
         <p>
           Estruturalmente, há atualmente 9 times entre os quais se dividem as
           tarefas:
