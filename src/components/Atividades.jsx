@@ -5,7 +5,7 @@ class Atividades extends Component {
   render() {
     return (
       <Container>
-        <h1>Atividades Realizadas</h1>
+        <h4 style={{color: "#A23234"}}>ATIVIDADES</h4>
         <p>
           Nas instituições, promove-se dinâmicas entre voluntários e moradores;
           as ações mais importantes são as que acontecem na entregas dos

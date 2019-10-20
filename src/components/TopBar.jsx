@@ -30,10 +30,10 @@ class TopBar extends Component {
             <NavDropdown title="Chega mais!" id="basic-nav-dropdown" style={{margin:"14px"}}>
               <NavDropdown.Item href="/contato">Contato</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="/seja_membro">Seja membro</NavDropdown.Item>
+              <NavDropdown.Item href="/seja_membro">Nos Ajude</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link style={{margin:"14px"}} href="/instituicoes">Quem Ajudamos</Nav.Link>
-            <Nav.Link style={{margin:"14px"}} href="#link">Área do membro</Nav.Link>
+            <Nav.Link style={{margin:"14px"}} href="/login">Área do membro</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
