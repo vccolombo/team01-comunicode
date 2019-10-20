@@ -68,25 +68,53 @@ app.post('/api/add-users', (req, res) => {
             "nome": "Abraao Jose",
             "email": "abraao@mail.com",
             "time": "Ação Social",
-            "aniversario": "01/01/2001"
+            "aniversario": "01/01/2001",
+            "telefone": "12345",
+            "operadora": "M@U",
+            "facebook": "facebook.com/markzuckeberg",
+            "universidade": "UFSCar",
+            "curso": "Eng. Comp",
+            "ano": "2016",
+            "carro": false
         },
         {
             "nome": "José da silva",
             "email": "jose@mail.com",
             "time": "Arrecadação",
-            "aniversario": "01/01/2001"
+            "aniversario": "01/01/2001",
+            "telefone": "12345",
+            "operadora": "M@U",
+            "facebook": "facebook.com/markzuckeberg",
+            "universidade": "UFSCar",
+            "curso": "Eng. Comp",
+            "ano": "2016",
+            "carro": false
         },
         {
             "nome": "Víctor Cora",
             "email": "victorcora98@gmail.com",
             "time": "Arrecadação",
-            "aniversario": "18/05/1998"
+            "aniversario": "18/05/1998",
+            "telefone": "12345",
+            "operadora": "M@U",
+            "facebook": "facebook.com/markzuckeberg",
+            "universidade": "UFSCar",
+            "curso": "Eng. Comp",
+            "ano": "2016",
+            "carro": true
         },
         {
             "nome": "Bartolomeu",
             "email": "bart@mail.com",
             "time": "Eventos",
-            "aniversario": "01/01/2001"
+            "aniversario": "01/01/2001",
+            "telefone": "12345",
+            "operadora": "M@U",
+            "facebook": "facebook.com/markzuckeberg",
+            "universidade": "UFSCar",
+            "curso": "Eng. Comp",
+            "ano": "2016",
+            "carro": false
         }
     ]
     const membros = gerarIdn(req.body);
@@ -107,6 +135,23 @@ app.post('/api/add-users', (req, res) => {
         })
     });
 });
+
+app.get('/api/get-all-users', (req, res) => {
+    let ref = db.collection('users');
+    var result = [];
+    let all = ref.get()
+        .then(snapshot => {
+            snapshot.forEach(doc => {
+                result = result.concat(doc._fieldsProto);
+            })
+            res.send(result);
+            return null;
+        })
+        .catch(err => {
+            console.log(err);
+            res.send("Error getting docs");
+        });
+})
 
 app.get('/api/get-user', (req, res) => {
     const idn = req.query.idn;
@@ -138,7 +183,7 @@ app.get('/api/get-messages', (req, res) => {
     let all = ref.get()
         .then(snapshot => {
             snapshot.forEach(doc => {
-                result = result.concat(doc);
+                result = result.concat(doc._fieldsProto);
             })
             res.send(result);
             return null;
@@ -149,16 +194,16 @@ app.get('/api/get-messages', (req, res) => {
         });
 });
 
-const cleanCSV = (csvString) => {
-    // const text = csvString.match(/Time[^]*/g).toString();
-    const text = csvString.toString();
-    let splitArray = text.split('\n');
-    let result = splitArray.join('\n');
-    return result;
-}
-
+// Não funcionando mas devia pegar o csv e cadastrar os membros
 app.post('/add-members', (req, res) => {
-    const csv = cleanCSV(req.body.toString());
+    const csv = req.body.toString().match(/Time[^]*/g).toString();
+    csvtojson().fromString(csv).then(obj => {
+        console.log(obj);
+        return null;
+    })
+    .catch(err => {
+        return err;
+    })
     console.log(csv);
     return res.send(csv);
 });
