@@ -7,7 +7,7 @@
 
 ### 🏠 [Homepage](https://github.com/vccolombo/team01-comunicode)
 
-## Instalando
+## Instalando o site
 
 ```sh
 git clone https://github.com/vccolombo/team01-comunicode.git
@@ -15,13 +15,21 @@ cd team01-comunicode
 npm install
 ```
 
-## Como usar
+## Como usar o site
 
 ```sh
 npm start
 ```
 
 Depois acesse `localhost:3000`.
+
+## Backend
+
+Na pasta backend tem todo o código das functions do Firebase.
+
+## Mobile
+
+Abra a pasta mobile/operacao_natal_comunicode no Flutter. Talvez seja necessário adicionar o Flutter SDK para testar o app no Android Studio.
 
 ## Autores
 
