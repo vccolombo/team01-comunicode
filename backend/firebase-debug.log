@@ -1,0 +1,118 @@
+[debug] [2019-10-19T22:22:56.649Z] ----------------------------------------------------------------------
+[debug] [2019-10-19T22:22:56.653Z] Command:       /usr/bin/node /usr/bin/firebase serve
+[debug] [2019-10-19T22:22:56.653Z] CLI Version:   7.6.1
+[debug] [2019-10-19T22:22:56.653Z] Platform:      linux
+[debug] [2019-10-19T22:22:56.653Z] Node Version:  v10.16.3
+[debug] [2019-10-19T22:22:56.654Z] Time:          Sat Oct 19 2019 19:22:56 GMT-0300 (Brasilia Standard Time)
+[debug] [2019-10-19T22:22:56.654Z] ----------------------------------------------------------------------
+[debug] [2019-10-19T22:22:56.654Z] 
+[debug] [2019-10-19T22:22:56.664Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-10-19T22:22:56.664Z] > authorizing via signed-in user
+[debug] [2019-10-19T22:22:56.664Z] [iam] checking project team01-comunicode for permissions ["firebase.projects.get"]
+[debug] [2019-10-19T22:22:56.667Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/team01-comunicode:testIamPermissions  
+
+[debug] [2019-10-19T22:22:57.978Z] <<< HTTP RESPONSE 200
+[debug] [2019-10-19T22:22:57.981Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/team01-comunicode  
+ 
+[debug] [2019-10-19T22:22:59.422Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/home/vccolombo/Programing/comunicode'...
+[info] 
+[debug] [2019-10-19T22:22:59.428Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/team01-comunicode/webApps/-/config  
+ 
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "10"
+[info] ✔  functions: Emulator started at http://localhost:5001
+[debug] [2019-10-19T22:23:00.940Z] <<< HTTP RESPONSE 200
+[info] i  functions: Watching "/home/vccolombo/Programing/comunicode/functions" for Cloud Functions...
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+[debug] [2019-10-19T22:23:01.482Z] [runtime-status] Functions runtime initialized. {"cwd":"/home/vccolombo/Programing/comunicode/functions","node_version":"10.16.3"}
+[debug] [2019-10-19T22:23:01.484Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-19T22:23:01.490Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/home/vccolombo/Programing/comunicode/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-19T22:23:01.492Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/vccolombo/Programing/comunicode/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-19T22:23:01.494Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/vccolombo/Programing/comunicode/functions/node_modules/firebase-functions/lib/index.js"}
+[info] ✔  functions[api]: http function initialized (http://localhost:5001/team01-comunicode/us-central1/api).
+[info] [hosting] Rewriting /add-members to http://localhost:5001/team01-comunicode/us-central1/api for local Function api
+[debug] [2019-10-19T22:23:10.518Z] Accepted request POST /team01-comunicode/us-central1/api/add-members --> api
+[debug] [2019-10-19T22:23:11.038Z] [runtime-status] Functions runtime initialized. {"cwd":"/home/vccolombo/Programing/comunicode/functions","node_version":"10.16.3"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-10-19T22:23:11.040Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-19T22:23:11.045Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/home/vccolombo/Programing/comunicode/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-19T22:23:11.047Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/vccolombo/Programing/comunicode/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-19T22:23:11.048Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/vccolombo/Programing/comunicode/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-19T22:23:11.312Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-10-19T22:23:11.312Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-10-19T22:23:11.312Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-10-19T22:23:11.321Z] {"socketPath":"/tmp/firebase_emulator_invocation_32201.sock"}
+[debug] [2019-10-19T22:23:11.325Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_32201.sock"}
+[debug] [2019-10-19T22:23:11.338Z] [runtime-status] Ephemeral server used! {}
+[info] >  -----------------------------18885094981346526430682042183
+Content-Disposition: form-data; name="file"; filename="dados.csv"
+Content-Type: text/csv
+
+Time,Nome,Telefone,Operadora,Email,Facebook,Universidade,Curso,AnoIngresso,Aniversario
+1,Otávio,14997417122,Claro,otavio.cts@gmail.com,ota,UFSCar,BCC,2016,22/04/1998
+2,Pabolo,16911112222,Vivo,pabololols@gmail.com,pabolo,USP,BCC,2018,11/11/2011
+3,Ariane,16933334444,GAMSo,ari@gmail.com,ariane,UFSCar,BCC,2017,11/11/2011
+4,Fernanda,16955556666,M@U,fer@gmail.com,fern,UFSCar,EnC,2017,11/11/2011
+5,Víctor,1677778888,M@U,cora@gmail.com,cora,UFSCar,EnC,2016,11/11/2011
+-----------------------------18885094981346526430682042183--
+
+[info] >  Time,Nome,Telefone,Operadora,Email,Facebook,Universidade,Curso,AnoIngresso,Aniversario
+1,Otávio,14997417122,Claro,otavio.cts@gmail.com,ota,UFSCar,BCC,2016,22/04/1998
+2,Pabolo,16911112222,Vivo,pabololols@gmail.com,pabolo,USP,BCC,2018,11/11/2011
+3,Ariane,16933334444,GAMSo,ari@gmail.com,ariane,UFSCar,BCC,2017,11/11/2011
+4,Fernanda,16955556666,M@U,fer@gmail.com,fern,UFSCar,EnC,2017,11/11/2011
+5,Víctor,1677778888,M@U,cora@gmail.com,cora,UFSCar,EnC,2016,11/11/2011
+-----------------------------18885094981346526430682042183--
+
+[debug] [2019-10-19T22:23:11.343Z] [runtime-status] Ephemeral server survived. {}
+[debug] [2019-10-19T22:23:55.729Z] File /home/vccolombo/Programing/comunicode/functions/index.js changed, reloading triggers
+[debug] [2019-10-19T22:23:57.197Z] [runtime-status] Functions runtime initialized. {"cwd":"/home/vccolombo/Programing/comunicode/functions","node_version":"10.16.3"}
+[debug] [2019-10-19T22:23:57.199Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-19T22:23:57.205Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/home/vccolombo/Programing/comunicode/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-19T22:23:57.206Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/vccolombo/Programing/comunicode/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-19T22:23:57.208Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/vccolombo/Programing/comunicode/functions/node_modules/firebase-functions/lib/index.js"}
+[info] [hosting] Rewriting /add-members to http://localhost:5001/team01-comunicode/us-central1/api for local Function api
+[debug] [2019-10-19T22:23:59.158Z] Accepted request POST /team01-comunicode/us-central1/api/add-members --> api
+[debug] [2019-10-19T22:23:59.595Z] [runtime-status] Functions runtime initialized. {"cwd":"/home/vccolombo/Programing/comunicode/functions","node_version":"10.16.3"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-10-19T22:23:59.597Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-19T22:23:59.601Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/home/vccolombo/Programing/comunicode/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-19T22:23:59.602Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/vccolombo/Programing/comunicode/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-19T22:23:59.604Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/vccolombo/Programing/comunicode/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-19T22:23:59.867Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-10-19T22:23:59.868Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-10-19T22:23:59.868Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-10-19T22:23:59.880Z] {"socketPath":"/tmp/firebase_emulator_invocation_32236.sock"}
+[debug] [2019-10-19T22:23:59.882Z] [functions] Runtime ready! Sending request! {"socketPath":"/tmp/firebase_emulator_invocation_32236.sock"}
+[debug] [2019-10-19T22:23:59.899Z] [runtime-status] Ephemeral server used! {}
+[info] >  -----------------------------75362718315275287891186991577
+Content-Disposition: form-data; name="file"; filename="dados.csv"
+Content-Type: text/csv
+
+Time,Nome,Telefone,Operadora,Email,Facebook,Universidade,Curso,AnoIngresso,Aniversario
+1,Otávio,14997417122,Claro,otavio.cts@gmail.com,ota,UFSCar,BCC,2016,22/04/1998
+2,Pabolo,16911112222,Vivo,pabololols@gmail.com,pabolo,USP,BCC,2018,11/11/2011
+3,Ariane,16933334444,GAMSo,ari@gmail.com,ariane,UFSCar,BCC,2017,11/11/2011
+4,Fernanda,16955556666,M@U,fer@gmail.com,fern,UFSCar,EnC,2017,11/11/2011
+5,Víctor,1677778888,M@U,cora@gmail.com,cora,UFSCar,EnC,2016,11/11/2011
+-----------------------------75362718315275287891186991577--
+
+[info] >  Time,Nome,Telefone,Operadora,Email,Facebook,Universidade,Curso,AnoIngresso,Aniversario
+1,Otávio,14997417122,Claro,otavio.cts@gmail.com,ota,UFSCar,BCC,2016,22/04/1998
+2,Pabolo,16911112222,Vivo,pabololols@gmail.com,pabolo,USP,BCC,2018,11/11/2011
+3,Ariane,16933334444,GAMSo,ari@gmail.com,ariane,UFSCar,BCC,2017,11/11/2011
+4,Fernanda,16955556666,M@U,fer@gmail.com,fern,UFSCar,EnC,2017,11/11/2011
+5,Víctor,1677778888,M@U,cora@gmail.com,cora,UFSCar,EnC,2016,11/11/2011
+-----------------------------75362718315275287891186991577--
+
+[info] >  /home/vccolombo/Programing/comunicode/functions/node_modules/csvtojson/v2/Converter.js:99
+[info] >                  var str = csvString.substr(idx, size);
+[info] >                                      ^
+[info] >  
+[info] >  TypeError: csvString.substr is not a function
+[info] >      at Readable.read._read (/home/vccolombo/Programing/comunicode/functions/node_modules/csvtojson/v2/Converter.js:99:37)
+[info] >      at Readable.read (_stream_readable.js:470:10)
+[info] >      at resume_ (_stream_readable.js:949:12)
+[info] >      at process._tickCallback (internal/process/next_tick.js:63:19)
