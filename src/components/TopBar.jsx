@@ -32,7 +32,7 @@ class TopBar extends Component {
               <NavDropdown.Divider />
               <NavDropdown.Item href="/seja_membro">Seja membro</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#link">Área do membro</Nav.Link>
+            <Nav.Link href="/login">Área do membro</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
