@@ -3,9 +3,7 @@ import { Form, Button, Carousel } from "react-bootstrap";
 import slide1 from "../../assets/slide1.jpg";
 import slide2 from "../../assets/slide2.jpg";
 import slide3 from "../../assets/slide3.jpg";
-import snowflake from "../../assets/snowflake.jpg";
 import "../../components/styles.css"
-
 
 class Inicio extends Component {
   render() {
@@ -22,7 +20,7 @@ class Inicio extends Component {
             </Button>
         </Form>
 
-        <Carousel>
+        <Carousel indicators="False">
           <Carousel.Item>
             <img class="d-block w-100" src={slide1} alt="First slide" style={{width: "auto", height:"720px"}}/>
             <Carousel.Caption>
