@@ -17,10 +17,51 @@ app.get('/api/test', (req, res) => {
 })
 
 app.post('/api/add-users', (req, res) => {
+    req.body = [{
+            "idn": "19001001",
+            "nome": "abraao jose",
+            "email": "abraao@mail.com",
+            "equipe": "Ação Social",
+            "aniversario": "01/01/2001"
+        },
+        {
+            "idn": "19002001",
+            "nome": "José da silva",
+            "email": "jose@mail.com",
+            "equipe": "Arrecadação",
+            "aniversario": "01/01/2001"
+        },
+        {
+            "idn": "19002002",
+            "nome": "Víctor Cora",
+            "email": "victorcora98@gmail.com",
+            "equipe": "Arrecadação",
+            "aniversario": "18/05/1998"
+        },
+        {
+            "idn": "19003001",
+            "nome": "Bartolomeu",
+            "email": "bart@mail.com",
+            "equipe": "Eventos",
+            "aniversario": "01/01/2001"
+        }
+    ]
     console.log(req.body);
     let ref = db.collection('users');
     req.body.forEach((pessoa) => {
         ref.doc(pessoa.idn).set(pessoa);
+        admin.auth().createUser({
+            email: pessoa.email,
+            emailVerified: false,
+            password: pessoa.aniversario,
+            displayName: pessoa.nome,
+            disabled: false
+        }).then((userRecord) => {
+            console.log("Successfully created new user:", userRecord.uid);
+            return null;
+        }).catch(err => {
+            return err;
+        })
     });
 });
 
@@ -78,26 +119,5 @@ app.post('/add-members', (req, res) => {
     console.log(csv);
     return res.send(csv);
 });
-
-app.post('/login', (req, res) => {
-    const idn = req.body.idn;
-    const password = req.body.password;
-    let ref = db.collection('users').doc(idn);
-    let getDoc = ref.get()
-        .then(doc => {
-            console.log(doc._fieldsProto.password);
-            if (doc._fieldsProto.password.stringValue === password) {
-                res.send({"auth": true});
-            } else {
-                res.send({"auth": false});
-            }
-            
-            return null;
-        })
-        .catch(err =>
-            res.send(err)
-        )
-
-})
 
 exports.api = functions.https.onRequest(app);
