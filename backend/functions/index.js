@@ -16,39 +16,82 @@ app.get('/api/test', (req, res) => {
     });
 })
 
+const gerarIdn = (membros) => {
+    membros.sort((a, b) => {
+        return a.nome < b.nome ? -1 : a.nome > b.nome ? 1 : 0;
+    });
+
+    // arrumar de pegar isso do bd
+    var times_counter = {
+        "Voluntários": 0,
+        "Ação Social": 0,
+        "Arrecadação": 0,
+        "Eventos": 0,
+        "Financeiro": 0,
+        "Logística": 0,
+        "Marketing": 0,
+        "Qualidade": 0,
+        "Recursos Humanos": 0,
+        "Sacolinhas": 0
+    };
+
+    // poder adicionar times novos
+    var times_codigo = {
+        "Voluntários": "000",
+        "Ação Social": "001",
+        "Arrecadação": "002",
+        "Eventos": "003",
+        "Financeiro": "004",
+        "Logística": "005",
+        "Marketing": "006",
+        "Qualidade": "007",
+        "Recursos Humanos": "008",
+        "Sacolinhas": "009"
+    };
+
+    // mudar isso
+    const ano = 19;
+
+    membros.forEach(membro => {
+        const time = times_codigo[membro.time];
+        const alfabetico = ++times_counter[membro.time];
+
+        membro["idn"] = `${ano}${time}${("00" + alfabetico).slice (-3)}`;
+        console.log(membro['idn']);
+    })
+
+    return membros;
+}
+
 app.post('/api/add-users', (req, res) => {
     req.body = [{
-            "idn": "19001001",
-            "nome": "abraao jose",
+            "nome": "Abraao Jose",
             "email": "abraao@mail.com",
-            "equipe": "Ação Social",
+            "time": "Ação Social",
             "aniversario": "01/01/2001"
         },
         {
-            "idn": "19002001",
             "nome": "José da silva",
             "email": "jose@mail.com",
-            "equipe": "Arrecadação",
+            "time": "Arrecadação",
             "aniversario": "01/01/2001"
         },
         {
-            "idn": "19002002",
             "nome": "Víctor Cora",
             "email": "victorcora98@gmail.com",
-            "equipe": "Arrecadação",
+            "time": "Arrecadação",
             "aniversario": "18/05/1998"
         },
         {
-            "idn": "19003001",
             "nome": "Bartolomeu",
             "email": "bart@mail.com",
-            "equipe": "Eventos",
+            "time": "Eventos",
             "aniversario": "01/01/2001"
         }
     ]
-    console.log(req.body);
+    const membros = gerarIdn(req.body);
     let ref = db.collection('users');
-    req.body.forEach((pessoa) => {
+    membros.forEach((pessoa) => {
         ref.doc(pessoa.idn).set(pessoa);
         admin.auth().createUser({
             email: pessoa.email,
