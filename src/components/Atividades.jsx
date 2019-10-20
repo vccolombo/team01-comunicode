@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Container } from "react-bootstrap";
+import "./styles.css"
 
 class Atividades extends Component {
   render() {

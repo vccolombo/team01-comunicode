@@ -8,7 +8,7 @@ class TopBar extends Component {
       <Container>
       <Navbar expand="lg">
         <Navbar.Brand href="/">
-          <Image src={logo} style={{height:"36px", width:"95px"}}></Image>
+          <Image src={logo} style={{height:"45px"}}></Image>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

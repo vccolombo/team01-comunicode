@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Container, Form, Button, Nav } from "react-bootstrap";
+import "./styles.css"
 
 class Login extends Component {
   render() {

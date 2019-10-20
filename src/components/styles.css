@@ -2,3 +2,13 @@
     font-weight:bold;
     text-align: center;
 }
+
+@font-face {
+    font-family: Raleway;
+    src: url(https://fonts.googleapis.com/css?family=Raleway&display=swap);
+}
+
+* {
+    font-family: 'Raleway', sans-serif !important;
+    background-color: #F0F0F0;
+}
