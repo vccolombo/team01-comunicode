@@ -29,7 +29,7 @@ app.get('/api/get-user', (req, res) => {
     let ref = db.collection('users').doc(idn);
     let getDoc = ref.get()
         .then(doc => {
-            res.send(doc);
+            res.send(doc._fieldsProto);
             return null;
         })
         .catch(err =>
@@ -65,11 +65,39 @@ app.get('/api/get-messages', (req, res) => {
         });
 });
 
+const cleanCSV = (csvString) => {
+    // const text = csvString.match(/Time[^]*/g).toString();
+    const text = csvString.toString();
+    let splitArray = text.split('\n');
+    let result = splitArray.join('\n');
+    return result;
+}
+
 app.post('/add-members', (req, res) => {
-    console.log(req.body);
-    const text = req.body.toString().match(/Time[^]*/g);
-    console.log(text);
-    csvtojson().fromString(text);
+    const csv = cleanCSV(req.body.toString());
+    console.log(csv);
+    return res.send(csv);
 });
+
+app.post('/login', (req, res) => {
+    const idn = req.body.idn;
+    const password = req.body.password;
+    let ref = db.collection('users').doc(idn);
+    let getDoc = ref.get()
+        .then(doc => {
+            console.log(doc._fieldsProto.password);
+            if (doc._fieldsProto.password.stringValue === password) {
+                res.send({"auth": true});
+            } else {
+                res.send({"auth": false});
+            }
+            
+            return null;
+        })
+        .catch(err =>
+            res.send(err)
+        )
+
+})
 
 exports.api = functions.https.onRequest(app);
