@@ -11,6 +11,9 @@ import Relatorios from "./Relatorios";
 import Prestacao from "./Prestacao";
 import Contato from "./Contato";
 import SejaMembro from "./SejaMembro";
+import Instituicoes from "./Instituicoes";
+import Login from "./Login";
+import AreaMembro from "./AreaMembro"
 
 class App extends Component {
   render() {
@@ -29,6 +32,9 @@ class App extends Component {
             <Route exact path="/prestacao" component={Prestacao} />
             <Route exact path="/contato" component={Contato} />
             <Route exact path="/seja_membro" component={SejaMembro} />
+            <Route exact path="/instituicoes" component={Instituicoes} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/area_membro" component={AreaMembro} />
           </Switch>
         </Router>
       </React.Fragment>
