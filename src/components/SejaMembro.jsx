@@ -5,7 +5,7 @@ class SejaMembro extends Component {
   render() {
     return (
       <Container>
-        <h1>Seja membro</h1>
+        <h1>Nos Ajude</h1>
         <p>Venha participar da nossa organização! As incrições ocorrem no mês de Junho, mas enquanto isso você pode ser um voluntário!</p>
         <p>"Voluntário é um cidadão que, motivado pelos valores de participação e solidariedade doa seu tempo, trabalho e talento, de maneira espontânea e não remunerada, para causa de interesse social e comunitário”. </p>
         <p>Ou seja, voluntário é aquele que se responsabiliza pelo contexto em que está inserido e procura fazer a diferença com as condições que tem disponível. Com isso em mente, convidamos todos vocês para ingressar no nosso TIMAÇO DE VOLUNTÁRIOS! </p>
