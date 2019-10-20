@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "317731202501",
+    "firebase_url": "https://team01-comunicode.firebaseio.com",
+    "project_id": "team01-comunicode",
+    "storage_bucket": "team01-comunicode.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:317731202501:android:30bc1aef354e76bdb897ac",
+        "android_client_info": {
+          "package_name": "com.comunicode.team01.operacao_natal_comunicode"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "317731202501-regeaj7egfd3n86nd4bvnuvca1r357c3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3Na-GOUqCr_o48DMnexWnpbW0Tf75_fw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "317731202501-regeaj7egfd3n86nd4bvnuvca1r357c3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
