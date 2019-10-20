@@ -8,12 +8,12 @@ class TopBar extends Component {
       <Container>
       <Navbar expand="lg">
         <Navbar.Brand href="/">
-          <Image src={logo} style={{width: "60%"}}></Image>
+          <Image src={logo} style={{height:"36px", width:"95px"}}></Image>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto">
-            <NavDropdown title="Quem somos?" id="basic-nav-dropdown">
+            <NavDropdown title="Quem somos?" id="basic-nav-dropdown" style={{margin:"14px"}}>
               <NavDropdown.Item href="/conheca">Conheça</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="/times">Times</NavDropdown.Item>
@@ -22,17 +22,17 @@ class TopBar extends Component {
               <NavDropdown.Divider />
               <NavDropdown.Item href="/impacto">Impacto Social</NavDropdown.Item>
             </NavDropdown>
-            <NavDropdown title="Transparência" id="basic-nav-dropdown">
+            <NavDropdown title="Transparência" id="basic-nav-dropdown" style={{margin:"14px"}}>
               <NavDropdown.Item href="/relatorios">Relatórios de desempenho</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="/prestacao">Prestação de contas</NavDropdown.Item>
             </NavDropdown>
-            <NavDropdown title="Chega mais!" id="basic-nav-dropdown">
+            <NavDropdown title="Chega mais!" id="basic-nav-dropdown" style={{margin:"14px"}}>
               <NavDropdown.Item href="/contato">Contato</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="/seja_membro">Seja membro</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#link">Área do membro</Nav.Link>
+            <Nav.Link style={{margin:"14px"}} href="#link">Área do membro</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
