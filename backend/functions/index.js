@@ -1,7 +1,7 @@
 const functions = require('firebase-functions');
 const admin = require('firebase-admin');
 const express = require('express');
-const csvtojson = require('csvtojson')
+const mailer = require('./mailer');
 
 admin.initializeApp(functions.config().firebase);
 
@@ -63,26 +63,6 @@ const gerarIdn = (membros) => {
     return membros;
 }
 
-const addUsers = (usuarios, callback) => {
-    const membros = gerarIdn(usuarios);
-    let ref = db.collection('users');
-    membros.forEach((pessoa) => {
-        ref.doc(pessoa.idn).set(pessoa);
-        admin.auth().createUser({
-            email: pessoa.email,
-            emailVerified: false,
-            password: pessoa.aniversario,
-            displayName: pessoa.nome,
-            disabled: false
-        }).then((userRecord) => {
-            console.log("Successfully created new user:", userRecord.uid);
-            return null;
-        }).catch(err => {
-            return err;
-        })
-    });
-}
-
 app.get('/api/get-all-users', (req, res) => {
     let ref = db.collection('users');
     var result = [];
@@ -140,6 +120,27 @@ app.get('/api/get-messages', (req, res) => {
             res.send("Error getting docs");
         });
 });
+
+const addUsers = (usuarios, callback) => {
+    const membros = gerarIdn(usuarios);
+    let ref = db.collection('users');
+    membros.forEach((pessoa) => {
+        ref.doc(pessoa.idn).set(pessoa);
+        mailer("me@email.com", "to@email.com", "title", "body");
+        admin.auth().createUser({
+            email: pessoa.email,
+            emailVerified: false,
+            password: pessoa.aniversario,
+            displayName: pessoa.nome,
+            disabled: false
+        }).then((userRecord) => {
+            console.log("Successfully created new user:", userRecord.uid);
+            return null;
+        }).catch(err => {
+            return err;
+        })
+    });
+}
 
 // Não funcionando mas devia pegar o csv e cadastrar os membros
 app.post('/add-members', (req, res) => {

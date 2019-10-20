@@ -9,14 +9,14 @@ class Inicio extends Component {
   render() {
     return (
       <div>
-        <Form.Label className="text-center">
+        <Form.Label className="text-center" style={{display: 'flex',  justifyContent:'center', alignItems:'center', color:"#A23234", fontWeight:"bold", fontSize:"24px"}}>
           Cadastre seu email para receber as Newsletter e ficar por dentro de
           todas as atividades!
         </Form.Label>
-        <Form className="form-inline">
-            <Form.Control className="col-4" type="text" placeholder="Digite aqui seu email" />
-            <Button style={{"borderRadius": "10%"}} variant="primary" type="submit">
-              Submit
+        <Form className="form-inline" style={{display: 'flex',  justifyContent:'center', alignItems:'center', paddingBottom: "42px"}}>
+            <Form.Control style={{backgroundColor: "#F2F2F2", borderRadius: "20px", fontSize:"24px", margin:"12px"}} className="col-4" type="text" placeholder="Digite aqui seu email" />
+            <Button style={{borderRadius: "20px", backgroundColor:"#416F54", fontWeight:"bold", fontSize:"24px"}} variant="primary" type="submit">
+              Inscreva-me! :D
             </Button>
 
           {/* <div
