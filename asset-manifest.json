@@ -1,25 +1,31 @@
 {
   "files": {
-    "main.js": "/static/js/main.4232bb4d.chunk.js",
-    "main.js.map": "/static/js/main.4232bb4d.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.d06d61b6.js",
-    "runtime-main.js.map": "/static/js/runtime-main.d06d61b6.js.map",
-    "static/css/2.0624914a.chunk.css": "/static/css/2.0624914a.chunk.css",
-    "static/js/2.b1e91ac0.chunk.js": "/static/js/2.b1e91ac0.chunk.js",
-    "static/js/2.b1e91ac0.chunk.js.map": "/static/js/2.b1e91ac0.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.2564b24a004744a3506eb8a9878dc174.js": "/precache-manifest.2564b24a004744a3506eb8a9878dc174.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.0624914a.chunk.css.map": "/static/css/2.0624914a.chunk.css.map",
-    "static/media/LogoOp.png": "/static/media/LogoOp.f527f0ee.png",
-    "static/media/slide1.jpg": "/static/media/slide1.0aca0fbe.jpg",
-    "static/media/slide2.jpg": "/static/media/slide2.69f5e2ac.jpg",
-    "static/media/slide3.jpg": "/static/media/slide3.32bc2592.jpg"
+    "main.css": "/vccolombo/team01-comunicode/static/css/main.296f75f3.chunk.css",
+    "main.js": "/vccolombo/team01-comunicode/static/js/main.a9f75af9.chunk.js",
+    "main.js.map": "/vccolombo/team01-comunicode/static/js/main.a9f75af9.chunk.js.map",
+    "runtime-main.js": "/vccolombo/team01-comunicode/static/js/runtime-main.62b7688f.js",
+    "runtime-main.js.map": "/vccolombo/team01-comunicode/static/js/runtime-main.62b7688f.js.map",
+    "static/css/2.0624914a.chunk.css": "/vccolombo/team01-comunicode/static/css/2.0624914a.chunk.css",
+    "static/js/2.9702276e.chunk.js": "/vccolombo/team01-comunicode/static/js/2.9702276e.chunk.js",
+    "static/js/2.9702276e.chunk.js.map": "/vccolombo/team01-comunicode/static/js/2.9702276e.chunk.js.map",
+    "index.html": "/vccolombo/team01-comunicode/index.html",
+    "precache-manifest.1170be4f0655808c1b5c38c83e3bd11f.js": "/vccolombo/team01-comunicode/precache-manifest.1170be4f0655808c1b5c38c83e3bd11f.js",
+    "service-worker.js": "/vccolombo/team01-comunicode/service-worker.js",
+    "static/css/2.0624914a.chunk.css.map": "/vccolombo/team01-comunicode/static/css/2.0624914a.chunk.css.map",
+    "static/css/main.296f75f3.chunk.css.map": "/vccolombo/team01-comunicode/static/css/main.296f75f3.chunk.css.map",
+    "static/media/LogoOp.png": "/vccolombo/team01-comunicode/static/media/LogoOp.f527f0ee.png",
+    "static/media/quemsomos.jpg": "/vccolombo/team01-comunicode/static/media/quemsomos.f37e2094.jpg",
+    "static/media/siteopn.jpg": "/vccolombo/team01-comunicode/static/media/siteopn.b9d1d821.jpg",
+    "static/media/slide1.jpg": "/vccolombo/team01-comunicode/static/media/slide1.0aca0fbe.jpg",
+    "static/media/slide2.jpg": "/vccolombo/team01-comunicode/static/media/slide2.69f5e2ac.jpg",
+    "static/media/slide3.jpg": "/vccolombo/team01-comunicode/static/media/slide3.32bc2592.jpg",
+    "static/media/snowflake.jpg": "/vccolombo/team01-comunicode/static/media/snowflake.708019f1.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.d06d61b6.js",
+    "static/js/runtime-main.62b7688f.js",
     "static/css/2.0624914a.chunk.css",
-    "static/js/2.b1e91ac0.chunk.js",
-    "static/js/main.4232bb4d.chunk.js"
+    "static/js/2.9702276e.chunk.js",
+    "static/css/main.296f75f3.chunk.css",
+    "static/js/main.a9f75af9.chunk.js"
   ]
 }
