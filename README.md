@@ -3,7 +3,9 @@
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
 </p>
 
-> Projeto do time 01 para o Comunicode 2019. Hohoho!
+Projeto do time 01 para o Hackathon Comunicode 2019. Hohoho!
+
+Esse projeto ganhou o segundo lugar no Hackathon!
 
 ### 🏠 [Homepage](https://github.com/vccolombo/team01-comunicode)
 
